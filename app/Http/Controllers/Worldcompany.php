@@ -9,6 +9,6 @@ class Worldcompany extends Controller
 {
     //
     public function addNewCountryCompany(Request $request){
-        
+        return response()->json(["msg"=>"hellow "],200);
     }
 }
