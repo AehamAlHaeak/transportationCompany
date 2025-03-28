@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('vehicles', function (Blueprint $table) {
+            
             $table->unsignedBigInteger("kind_id");
-            $table->foreign("kind_id")->references("id")->on("kind");
+            $table->foreign("kind_id")->references("id")->on("kinds");
         });
     }
 
