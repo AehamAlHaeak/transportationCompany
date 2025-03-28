@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('local_companies', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("name");
+            $table->string("name")->unique();
             $table->string("location");
             $table->enum("type",[0,1,2,3,4,5,6,7]);
             /*
