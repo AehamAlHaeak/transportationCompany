@@ -18,6 +18,10 @@ class Worldcompany extends Controller
 
         echo "hellow world this is the new world";
 
+        echo "the wolf commit this";
+
+
+
         return response()->json(["msg"=>"hellow "],200);
     }
 }
