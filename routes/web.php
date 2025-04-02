@@ -1,8 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\IDUController;
+use App\Mail\SayHellow;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,26 +14,14 @@ use App\Http\Controllers\IDUController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
+
 */
-Route::get('/',function (){
-    
-    return view('echo');
-});
-Route::post('add',[ApiController::class,'add']);
-Route::get('/showName/{name}/{last}', function ($name,$last) {
-   
-    return view('htmll',compact($name,$last));
-});
-Route::get('/hellow/{name}',[ApiController::class,'telMeHellow']);
-Route::resource('CAD',IDUController::class)->except(['index']);
+/*
+Route::get("/sendEmail",function (){
+Mail::to("www.haeak@gmail.com")->send(new SayHellow());
+return response()->json(["msg"=>"sent"],200);
+}); 
+the domain is not work so i will not delete the code because in future i will costumi
 
-
-
-Route::controller(ApiController::class)->group(function(){
-Route::get('/hellow','telMeHellow');
-
-Route::get('/allert','allert');
-
-});
+*/
 
