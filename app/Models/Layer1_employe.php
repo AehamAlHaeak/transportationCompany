@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Layer1_employe extends Model
-{
+{   
+  
     use HasFactory;
     public $fillable=[
         "name",
