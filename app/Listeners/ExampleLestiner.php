@@ -2,13 +2,15 @@
 
 namespace App\Listeners;
 
-use App\Events\AddEmploye;
+use App\Events\ExampleEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use app\Models\Layer1_employe;
-class PushToDBEmpL1
+
+class ExampleLestiner
 {
-   
+    /**
+     * Create the event listener.
+     */
     public function __construct()
     {
         //
@@ -17,14 +19,8 @@ class PushToDBEmpL1
     /**
      * Handle the event.
      */
-    public function handle(AddEmploye $event): void
+    public function handle(ExampleEvent $event): void
     {
-     
-      
-      $empl= $event->empL;
-       $empl->save();
-      
-       
-       
+        //
     }
 }

@@ -13,5 +13,5 @@ class LocalCompany extends Model
         "location",
         "country_company_id"
     ];
-    protected $guarded;
+    protected $guarded=[];
 }

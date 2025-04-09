@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Layer3_employe extends Model
 {
+    use Notifiable;
     use HasFactory;
     public $fillable=[
         "name",
@@ -17,7 +19,14 @@ class Layer3_employe extends Model
         "work_place",
          "email",
         "phoneNumber",
-        "specialization_id"
+        "specialization_id",
+        "salary"
     ];
-    protected $guarded;
+    protected $guarded=[];
+    public function getWorkPlace(){
+        return $this->belongsTo(LocalCompany::class,"work_place");
+    }
+    public function specialization(){
+        return $this->belongsTo(Specalization::class,"specialization_id") ?? "no specialization";
+    }
 }

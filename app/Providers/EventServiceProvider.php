@@ -2,13 +2,14 @@
 
 namespace App\Providers;
 
-use App\Events\AddEmoLy1;
+use App\Events\AddEmploye;
 use App\Listeners\PushToDBEmpL1;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-
+use App\Events\ExampleEvent;
+use App\Listeners\ExampleLestiner;
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -20,8 +21,11 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        AddEmoLy1::class=>[
+        AddEmploye::class=>[
             PushToDBEmpL1::class
+        ],
+        ExampleEvent::class=>[
+            ExampleLestiner::class
         ]
     ];
 

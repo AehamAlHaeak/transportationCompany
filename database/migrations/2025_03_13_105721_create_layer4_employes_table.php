@@ -24,7 +24,7 @@ return new class extends Migration
             $table->time("birthDay");
             $table->unsignedBigInteger("work_place");
             $table->foreign("work_place")->references("id")->on("factories");
-
+            $table->double("salary");
         });
     }
 

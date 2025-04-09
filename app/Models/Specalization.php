@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Specalization extends Model
 {
     use HasFactory;
+   
     public $fillable=[
         "specialization"
     ];
-    protected $guarded;
+    protected $guarded=[];
 }

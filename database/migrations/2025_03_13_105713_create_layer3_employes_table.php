@@ -24,7 +24,7 @@ return new class extends Migration
                 $table->string("email");
                 $table->unsignedBigInteger("work_place");
                 $table->foreign("work_place")->references("id")->on("local_companies");
-
+                $table->double("salary");
         });
     }
 

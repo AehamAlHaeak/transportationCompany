@@ -22,6 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger("phoneNumber");
             $table->string("email");
             $table->time("birthDay");
+            $table->double("salary");
           
         });
     }
