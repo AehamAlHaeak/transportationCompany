@@ -74,4 +74,7 @@ class Worldcompany extends Controller
       return response()->json(["msg"=>"seccessfull",200]);
 
     }
+    public function addTryng(){
+        return "hellow i am from the second";
+    }
 }
