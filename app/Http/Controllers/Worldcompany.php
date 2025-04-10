@@ -74,7 +74,15 @@ class Worldcompany extends Controller
       return response()->json(["msg"=>"seccessfull",200]);
 
     }
+<<<<<<< HEAD
     public function addTryingFromFirst(){
       return "hellow i am from the first ";
   }
+=======
+
+   
+
+   
+
+>>>>>>> 9e8332a6a6f094c17577fac4826afcdc44aaa1dc
 }
