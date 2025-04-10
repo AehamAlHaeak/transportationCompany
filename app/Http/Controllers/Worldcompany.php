@@ -77,7 +77,9 @@ class Worldcompany extends Controller
 
   
 
-
+public function addTryFirst(){
+  return "add try first";
+}
    
 
    
