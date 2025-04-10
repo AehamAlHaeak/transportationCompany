@@ -80,7 +80,9 @@ class Worldcompany extends Controller
 
    
 
-   
+    public function addTrySecond(){
+      return "add try second";
+    }
 
 
 }
