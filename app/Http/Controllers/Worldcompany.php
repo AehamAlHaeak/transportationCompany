@@ -71,7 +71,10 @@ class Worldcompany extends Controller
        // event(new AddEmploye($employe));
        $employe->save();
        $employe->notify(new Welcome_in_our_Company($employe));
-      return response()->json(["msg"=>"seccessfull",200]);
+       //cahnge state to readed 
+       $employe->notifications()->latest()->update(["read_at"=>now()]);
+       //to return the notification
+      return response()->json( ["notification"=>$employe->notifications()->latest()->get()]);
 
     }
 
