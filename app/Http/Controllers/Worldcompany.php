@@ -83,7 +83,7 @@ public function addTryFirst(){
    
 
     public function addTrySecond(){
-      return "add try second";
+      return "add try second new term";
     }
 
 
