@@ -55,7 +55,8 @@ class Worldcompany extends Controller
         "salary"=>"required",
         "specialization_id"=>"required"
       ]);
-      
+      //.m this code doesnot have any task but i remine it here as a declaration below:
+        //with the whole path and string conection replace all this!!!!!!!
       // $employe=new Layer1_employe();
       // if($request->layer==2){
       //   $employe=new Layer2_employe();
@@ -78,7 +79,7 @@ class Worldcompany extends Controller
         "salary"=>$request->salary,
         
          "work_place"=>$request->work_place];
-         // .Q the technique!!
+         // .Q the technique!! this code replace the statments in the comment .M above
         $modelName="App\Models\Layer".$request->layer."_employe";
          $employe=$this->storeInModel($modelName,$valedatedEmpl);
      
