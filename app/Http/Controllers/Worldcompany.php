@@ -66,6 +66,7 @@ class Worldcompany extends Controller
       // if($request->layer==4){
       //   $employe=new Layer4_employe();
       // }
+      //Data was a parameter to storeInModel but the $valedatedEmpl replace it as the above
         $Data=[  "email"=>$request->email,
          "name"=>$request->name,
          "last_name"=>$request->lastName,
